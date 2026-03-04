@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1KFMT8LKQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-H1KFMT8LKQ');
+</script>
+<meta charset="UTF-8">
+<title>SayanFitness</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0b0f1a, #111a2c);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.banner-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.banner-texto h1 {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.banner-texto p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.banner-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.banner-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.8s ease;
+}
+
+.video-promo {
+    max-width: 1024px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0,0,0,.6);
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.beneficios {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.beneficios h2 {
+    margin-bottom: 20px;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    color: #ccc;
+}
+
+.formulario {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-azul {
+    padding: 12px;
+    background: transparent;
+    color: cyan;
+    border: 2px solid cyan;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    box-shadow:
+        0 0 5px cyan,
+        0 0 25px cyan,
+        0 0 50px cyan;
+    animation: glow 2s infinite alternate;
+}
+
+.btn-azul:hover {
+    background: cyan;
+    color: #111;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    }
+    to {
+        box-shadow: 0 0 20px cyan, 0 0 60px cyan;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .banner-texto h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="banner">
+    <div class="banner-texto">
+        <h1>TRANSFORMA TU CUERPO EN 28 DÍAS</h1>
+        <p>Entrenamientos estructurados. Progresión real. Disciplina absoluta.</p>
+        <a href="#preview" class="btn-azul">VER PREVIEW</a>
+
+        <h3>$4990 CLP</h3>
+        <h4>Acceso completo en la App</h4>
+    </div>
+
+    <div class="banner-imagen">
+        <img id="imagenBanner" src="./img/gym.jpg" alt="Imagen del Banner">
+    </div>
+</section>
+
+<!-- BIENVENIDA -->
+<section class="video-promo">
+    <h2>Bienvenida</h2>
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/6bvusXbsCic"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- PREVIEW -->
+<section id="preview" class="video-promo">
+    <h2>Día 1 - Preview</h2>
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/9NuKH-yiaqw"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="beneficios">
+    <h2>¿Qué obtienes?</h2>
+    <ul>
+        <li>✔ 28 días estructurados paso a paso</li>
+        <li>✔ Progresión física real</li>
+        <li>✔ Rutinas profesionales</li>
+        <li>✔ Acceso completo dentro de la App</li>
+    </ul>
+</section>
+
+<!-- FORMULARIO -->
+<div class="formulario">
+    <h2 style="text-align:center;">Accede al Día 1 GRATIS en la App</h2>
+
+    <form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
+        <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+        <input type="email" name="email" placeholder="Ingrese su email" required>
+        <textarea rows="5" name="comentario" placeholder="Ingrese su comentario"></textarea>
+        <input type="submit" value="QUIERO ACCESO" class="btn-azul">
+    </form>
+</div>
+
+<!-- BOTÓN DESCARGA -->
+<section class="video-promo">
+    <h2>Descarga la App</h2>
+    <a href="#" class="btn-azul">Disponible pronto en Google Play</a>
+</section>
+
+<script>
+const imagenes = [
+    "./img/gym.jpg",
+    "./img/gym1.jpg",
+    "./img/gym2.jpg",
+    "./img/gym3.jpg",
+    "./img/gym4.jpg",
+    "./img/gym5.jpg",
+    "./img/gym6.jpg"
+];
+
+let indice = 0;
+const img = document.getElementById("imagenBanner");
+
+setInterval(() => {
+    indice = (indice + 1) % imagenes.length;
+    img.src = imagenes[indice];
+}, 5000);
+</script>
+
+</body>
+</html>
