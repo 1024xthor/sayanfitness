@@ -8,7 +8,6 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'G-H1KFMT8LKQ');
 </script>
 
@@ -155,24 +154,14 @@ body {
     }
 }
 
-/* PANEL DE BOTONES FLOTANTE */
-/* # explicación breve: panel superpuesto que no altera el layout */
-
-/* PANEL DE PESTAÑA LATERAL */
-/* # explicación breve: contenedor fijo pegado al borde */
+/* PANEL BOTÓN LATERAL */
 
 .panel-botones{
-
 position:fixed;
 left:0;
 top:260px;
-
 z-index:999;
-
 }
-
-/* PESTAÑA VERTICAL */
-/* # explicación breve: botón tipo pestaña agenda */
 
 .boton-grande{
 
@@ -180,15 +169,15 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-width:60px;                 /* # explicación breve: pestaña más delgada */
-height:200px;               /* # explicación breve: altura más equilibrada */
+width:60px;
+height:200px;
 
 background:linear-gradient(180deg,#ff6a00,#ff2e00);
 
 color:white;
 text-decoration:none;
 
-font-size:15px;             /* # explicación breve: texto más fino */
+font-size:15px;
 font-weight:bold;
 
 border-radius:0 16px 16px 0;
@@ -202,22 +191,17 @@ transition:0.3s;
 writing-mode:vertical-rl;
 transform:rotate(180deg);
 
-letter-spacing:2px;         /* # explicación breve: mejora lectura vertical */
+letter-spacing:2px;
 
 }
 
-/* texto vertical */
-
-writing-mode:vertical-rl;
-transform:rotate(180deg);
-
-}
-
-/* EFECTO HOVER */
+/* ######## CORRECCIÓN ######## */
+/* # explicación breve: eliminamos bloque CSS suelto que tenía una llave extra */
+/* ######## FIN CORRECCIÓN ######## */
 
 .boton-grande:hover{
 
-width:75px;   /* # explicación breve: se abre ligeramente */
+width:75px;
 
 box-shadow:
 0 0 20px #ff6a00,
@@ -225,36 +209,42 @@ box-shadow:
 
 }
 
-
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
-    .banner {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
 
-    .banner-texto h1 {
-        font-size: 32px;
-    }
+.banner {
+flex-direction: column;
+padding: 20px;
+text-align: center;
+}
 
-    /* # explicación breve: ocultar panel flotante en móviles */
+/* ######## AJUSTE MOBILE ######## */
+/* # explicación breve: título más cómodo en celular */
 
-    .panel-botones{
+.banner-texto h1 {
+font-size:28px;
+}
 
-    position:fixed;
+/* ######## FIN AJUSTE ######## */
 
-    left:120px;     /* # mueve el botón para no tapar el texto */
-    top:280px;
 
-    display:flex;
-    flex-direction:column;
+/* ######## CORRECCIÓN BOTÓN MOBILE ######## */
+/* # explicación breve: baja el botón para que no tape precio ni texto */
 
-    gap:25px;
+.panel-botones{
 
-    z-index:999;
+position:fixed;
 
-    }
+left:0;
+top:auto;
+bottom:120px;
+
+z-index:999;
+
+}
+
+/* ######## FIN CORRECCIÓN ######## */
 
 }
 
@@ -263,107 +253,130 @@ box-shadow:
 
 <body>
 
-<!-- PANEL DE BOTONES SUPERPUESTO -->
-<!-- # explicación breve: aquí podrás agregar botón 2 y botón 3 -->
-
 <div class="panel-botones">
-
 <a href="progreso.html" class="boton-grande">
 🔥 RUTA FITNESS
 </a>
-
 </div>
 
 <section class="banner">
-    <div class="banner-texto">
-        <h1>TRANSFORMA TU CUERPO EN 28 DÍAS</h1>
-        <p>Entrenamientos estructurados. Progresión real. Disciplina absoluta.</p>
 
-        <a href="#preview" class="btn-azul">VER PREVIEW</a>
+<div class="banner-texto">
 
-        <h3>$4990 CLP</h3>
-        <h4>Acceso completo en la App</h4>
-    </div>
+<h1>TRANSFORMA TU CUERPO EN 28 DÍAS</h1>
 
-    <div class="banner-imagen">
-        <img id="imagenBanner" src="./img/gym.jpg" alt="Imagen del Banner">
-    </div>
-</section>
+<p>Entrenamientos estructurados. Progresión real. Disciplina absoluta.</p>
 
-<!-- BIENVENIDA -->
-<section class="video-promo">
-    <h2>Bienvenida</h2>
-    <div class="video-container">
-        <iframe
-            src="https://www.youtube.com/embed/6bvusXbsCic"
-            allowfullscreen>
-        </iframe>
-    </div>
-</section>
+<a href="#preview" class="btn-azul">VER PREVIEW</a>
 
-<!-- PREVIEW -->
-<section id="preview" class="video-promo">
-    <h2>Día 1 - Preview</h2>
-    <div class="video-container">
-        <iframe
-            src="https://www.youtube.com/embed/9NuKH-yiaqw"
-            allowfullscreen>
-        </iframe>
-    </div>
-</section>
+<h3>$4990 CLP</h3>
+<h4>Acceso completo en la App</h4>
 
-<!-- BENEFICIOS -->
-<section class="beneficios">
-    <h2>¿Qué obtienes?</h2>
-    <ul>
-        <li>✔ 28 días estructurados paso a paso</li>
-        <li>✔ Progresión física real</li>
-        <li>✔ Rutinas profesionales</li>
-        <li>✔ Acceso completo dentro de la App</li>
-    </ul>
-</section>
-
-<!-- FORMULARIO -->
-<div class="formulario">
-    <h2 style="text-align:center;">Accede al Día 1 GRATIS en la App</h2>
-
-    <form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
-        <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
-        <input type="email" name="email" placeholder="Ingrese su email" required>
-        <textarea rows="5" name="comentario" placeholder="Ingrese su comentario"></textarea>
-        <input type="submit" value="QUIERO ACCESO" class="btn-azul">
-    </form>
 </div>
 
-<!-- BOTÓN DESCARGA -->
+<div class="banner-imagen">
+<img id="imagenBanner" src="./img/gym.jpg">
+</div>
+
+</section>
+
 <section class="video-promo">
-    <h2>Descarga la App</h2>
-    <a href="#" class="btn-azul">Disponible pronto en Google Play</a>
+
+<h2>Bienvenida</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/6bvusXbsCic"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section id="preview" class="video-promo">
+
+<h2>Día 1 - Preview</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/9NuKH-yiaqw"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section class="beneficios">
+
+<h2>¿Qué obtienes?</h2>
+
+<ul>
+
+<li>✔ 28 días estructurados paso a paso</li>
+<li>✔ Progresión física real</li>
+<li>✔ Rutinas profesionales</li>
+<li>✔ Acceso completo dentro de la App</li>
+
+</ul>
+
+</section>
+
+<div class="formulario">
+
+<h2 style="text-align:center;">Accede al Día 1 GRATIS en la App</h2>
+
+<form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
+
+<input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+
+<input type="email" name="email" placeholder="Ingrese su email" required>
+
+<textarea rows="5" name="comentario" placeholder="Ingrese su comentario"></textarea>
+
+<input type="submit" value="QUIERO ACCESO" class="btn-azul">
+
+</form>
+
+</div>
+
+<section class="video-promo">
+
+<h2>Descarga la App</h2>
+
+<a href="#" class="btn-azul">Disponible pronto en Google Play</a>
+
 </section>
 
 <script>
 
 const imagenes = [
-    "./img/gym.jpg",
-    "./img/gym1.jpg",
-    "./img/gym2.jpg",
-    "./img/gym3.jpg",
-    "./img/gym4.jpg",
-    "./img/gym5.jpg",
-    "./img/gym6.jpg"
+"./img/gym.jpg",
+"./img/gym1.jpg",
+"./img/gym2.jpg",
+"./img/gym3.jpg",
+"./img/gym4.jpg",
+"./img/gym5.jpg",
+"./img/gym6.jpg"
 ];
 
 let indice = 0;
 
 const img = document.getElementById("imagenBanner");
 
-/* # explicación breve: cambia la imagen cada 5 segundos */
+/* ######## EXPLICACIÓN ######## */
+/* # cambia imagen automáticamente cada 5 segundos */
 
 setInterval(() => {
 
-    indice = (indice + 1) % imagenes.length;
+indice = (indice + 1) % imagenes.length;
 
-    img.src = imagenes[indice];
+img.src = imagenes[indice];
 
 }, 5000);
 
@@ -371,4 +384,5 @@ setInterval(() => {
 
 </body>
 </html>
+
 
