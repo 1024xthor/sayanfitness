@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1KFMT8LKQ"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -10,11 +11,13 @@ gtag('js', new Date());
 
 gtag('config', 'G-H1KFMT8LKQ');
 </script>
+
 <meta charset="UTF-8">
 <title>SayanFitness</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -152,6 +155,78 @@ body {
     }
 }
 
+/* PANEL DE BOTONES FLOTANTE */
+/* # explicación breve: panel superpuesto que no altera el layout */
+
+/* PANEL DE PESTAÑA LATERAL */
+/* # explicación breve: contenedor fijo pegado al borde */
+
+.panel-botones{
+
+position:fixed;
+left:0;
+top:260px;
+
+z-index:999;
+
+}
+
+/* PESTAÑA VERTICAL */
+/* # explicación breve: botón tipo pestaña agenda */
+
+.boton-grande{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:60px;                 /* # explicación breve: pestaña más delgada */
+height:200px;               /* # explicación breve: altura más equilibrada */
+
+background:linear-gradient(180deg,#ff6a00,#ff2e00);
+
+color:white;
+text-decoration:none;
+
+font-size:15px;             /* # explicación breve: texto más fino */
+font-weight:bold;
+
+border-radius:0 16px 16px 0;
+
+box-shadow:
+0 0 12px #ff6a00,
+0 0 25px rgba(255,0,0,0.5);
+
+transition:0.3s;
+
+writing-mode:vertical-rl;
+transform:rotate(180deg);
+
+letter-spacing:2px;         /* # explicación breve: mejora lectura vertical */
+
+}
+
+/* texto vertical */
+
+writing-mode:vertical-rl;
+transform:rotate(180deg);
+
+}
+
+/* EFECTO HOVER */
+
+.boton-grande:hover{
+
+width:75px;   /* # explicación breve: se abre ligeramente */
+
+box-shadow:
+0 0 20px #ff6a00,
+0 0 40px rgba(255,0,0,0.7);
+
+}
+
+
+
 @media (max-width: 768px) {
     .banner {
         flex-direction: column;
@@ -162,16 +237,48 @@ body {
     .banner-texto h1 {
         font-size: 32px;
     }
+
+    /* # explicación breve: ocultar panel flotante en móviles */
+
+    .panel-botones{
+
+    position:fixed;
+
+    left:120px;     /* # mueve el botón para no tapar el texto */
+    top:280px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+
+    z-index:999;
+
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- PANEL DE BOTONES SUPERPUESTO -->
+<!-- # explicación breve: aquí podrás agregar botón 2 y botón 3 -->
+
+<div class="panel-botones">
+
+<a href="progreso.html" class="boton-grande">
+🔥 RUTA FITNESS
+</a>
+
+</div>
+
 <section class="banner">
     <div class="banner-texto">
         <h1>TRANSFORMA TU CUERPO EN 28 DÍAS</h1>
         <p>Entrenamientos estructurados. Progresión real. Disciplina absoluta.</p>
+
         <a href="#preview" class="btn-azul">VER PREVIEW</a>
 
         <h3>$4990 CLP</h3>
@@ -235,6 +342,7 @@ body {
 </section>
 
 <script>
+
 const imagenes = [
     "./img/gym.jpg",
     "./img/gym1.jpg",
@@ -246,13 +354,21 @@ const imagenes = [
 ];
 
 let indice = 0;
+
 const img = document.getElementById("imagenBanner");
 
+/* # explicación breve: cambia la imagen cada 5 segundos */
+
 setInterval(() => {
+
     indice = (indice + 1) % imagenes.length;
+
     img.src = imagenes[indice];
+
 }, 5000);
+
 </script>
 
 </body>
 </html>
+
