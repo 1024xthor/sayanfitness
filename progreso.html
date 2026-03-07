@@ -5,6 +5,11 @@
 
 <meta charset="UTF-8">
 
+######## CORRECCIÓN ########
+<!-- # explicación breve: viewport necesario para que el sitio se adapte a celulares -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+######## FIN CORRECCIÓN ########
+
 <title>SayanFitness Progreso</title>
 
 <style>
@@ -207,6 +212,35 @@ background:cyan;
 color:#111;
 
 }
+
+######## AJUSTE MOBILE ########
+/* # explicación breve: optimiza tamaño de título y botón en celulares */
+
+@media (max-width:768px){
+
+h1{
+font-size:30px;
+margin-top:90px;
+}
+
+.sub{
+font-size:18px;
+}
+
+.boton-volver{
+
+top:15px;
+left:15px;
+
+padding:10px 14px;
+
+font-size:14px;
+
+}
+
+}
+
+######## FIN AJUSTE ########
 
 </style>
 
