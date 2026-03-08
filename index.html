@@ -156,58 +156,125 @@ body {
 
 /* PANEL BOTÓN LATERAL */
 
+/* PANEL BOTONES LATERALES */
+
 .panel-botones{
 position:fixed;
 left:0;
-top:260px;
+top:0;
+height:100vh;
 z-index:999;
 }
 
+/* BOTÓN BASE */
+
 .boton-grande{
+
+position:fixed;
+left:0;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-width:60px;
-height:200px;
-
-background:linear-gradient(180deg,#ff6a00,#ff2e00);
+width:58px;
+height:180px;
 
 color:white;
 text-decoration:none;
 
-font-size:15px;
-font-weight:bold;
+font-size:14px;
+font-weight:700;
 
-border-radius:0 16px 16px 0;
-
-box-shadow:
-0 0 12px #ff6a00,
-0 0 25px rgba(255,0,0,0.5);
-
-transition:0.3s;
+border-radius:0 14px 14px 0;
 
 writing-mode:vertical-rl;
 transform:rotate(180deg);
 
 letter-spacing:2px;
 
+transition:all .25s ease;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
 }
 
-/* ######## CORRECCIÓN ######## */
-/* # explicación breve: eliminamos bloque CSS suelto que tenía una llave extra */
-/* ######## FIN CORRECCIÓN ######## */
+/* POSICIONES */
+
+.ruta{
+top:18%;
+background:linear-gradient(180deg,#ff7a18,#ff3d00);
+}
+
+.nutricion{
+top:42%;
+background:linear-gradient(180deg,#00d26a,#00994c);
+}
+
+.resultados{
+top:66%;
+background:linear-gradient(180deg,#7b5cff,#3f2b96);
+}
+
+/* EFECTO HOVER */
 
 .boton-grande:hover{
 
-width:75px;
+width:70px;
 
 box-shadow:
-0 0 20px #ff6a00,
-0 0 40px rgba(255,0,0,0.7);
+0 15px 35px rgba(0,0,0,.45),
+0 0 15px rgba(255,255,255,.15);
 
 }
+/* BOTÓN RUTA FITNESS (naranja) */
+
+.ruta{
+
+background:linear-gradient(180deg,#ff6a00,#ff2e00);
+
+}
+
+/* BOTÓN NUTRICIÓN (verde) */
+
+.nutricion{
+
+background:linear-gradient(180deg,#00d26a,#00a85a);
+
+box-shadow:
+0 0 12px #00d26a,
+0 0 25px rgba(0,255,120,0.5);
+
+}
+
+/* BOTÓN RESULTADOS */
+
+.resultados{
+
+background:linear-gradient(180deg,#8a2be2,#4b0082);
+
+box-shadow:
+0 0 12px #8a2be2,
+0 0 30px rgba(138,43,226,0.7);
+
+}
+/* POSICIÓN VERTICAL DE LOS BOTONES */
+
+.ruta{
+top:20%;
+position:fixed;
+}
+
+.nutricion{
+top:45%;
+position:fixed;
+}
+
+.resultados{
+top:70%;
+position:fixed;
+}
+
 
 /* RESPONSIVE */
 
@@ -254,9 +321,19 @@ z-index:999;
 <body>
 
 <div class="panel-botones">
-<a href="progreso.html" class="boton-grande">
+
+<a href="progreso.html" class="boton-grande ruta">
 🔥 RUTA FITNESS
 </a>
+
+<a href="nutricion.html" class="boton-grande nutricion">
+🥗 NUTRICIÓN
+</a>
+
+<a href="resultados.html" class="boton-grande resultados">
+📊 RESULTADOS
+</a>
+
 </div>
 
 <section class="banner">
@@ -384,5 +461,6 @@ img.src = imagenes[indice];
 
 </body>
 </html>
+
 
 
