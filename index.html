@@ -60,11 +60,11 @@ flex:1;
 text-align:center;
 }
 
-.banner-imagen img{
-width:100%;
-max-width:420px;
-border-radius:10px;
-transition:opacity .8s ease;
+.preview-img{
+    width: 320px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
 }
 
 /* ################ VIDEO ################ */
@@ -259,8 +259,17 @@ margin-left:120px;
 
 @media (max-width:768px){
 
-.banner-texto h1{
-font-size:28px;
+.preview-img{
+    width: 75%;
+    max-width: 300px;
+}
+
+.banner-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 }
 
 /* # explicación: formulario centrado en celular */
@@ -423,6 +432,7 @@ img.src=imagenes[indice];
 
 </body>
 </html>
+
 
 
 
