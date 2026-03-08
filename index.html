@@ -17,169 +17,177 @@ gtag('config', 'G-H1KFMT8LKQ');
 
 <style>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0b0f1a, #111a2c);
-    color: white;
-    scroll-behavior: smooth;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#0b0f1a,#111a2c);
+color:white;
+scroll-behavior:smooth;
 }
 
-.banner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    min-height: 100vh;
-    gap: 30px;
+/* ################ BANNER ################ */
+
+.banner{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+padding:40px;
+min-height:100vh;
+gap:30px;
 }
 
-.banner-texto {
-    flex: 1;
-    min-width: 280px;
+.banner-texto{
+flex:1;
+min-width:280px;
 }
 
-.banner-texto h1 {
-    font-size: 52px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.banner-texto h1{
+font-size:52px;
+font-weight:800;
+letter-spacing:2px;
 }
 
-.banner-texto p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-    color: #ccc;
+.banner-texto p{
+font-size:18px;
+line-height:1.5;
+margin-bottom:30px;
+color:#ccc;
 }
 
-.banner-imagen {
-    flex: 1;
-    text-align: center;
+.banner-imagen{
+flex:1;
+text-align:center;
 }
 
-.banner-imagen img {
-    max-width: 100%;
-    border-radius: 10px;
-    transition: opacity 0.8s ease;
+.banner-imagen img{
+max-width:100%;
+border-radius:10px;
+transition:opacity .8s ease;
 }
 
-.video-promo {
-    max-width: 1024px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: center;
+/* ################ VIDEO ################ */
+
+.video-promo{
+max-width:1024px;
+margin:60px auto;
+padding:0 20px;
+text-align:center;
 }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    border-radius: 14px;
-    box-shadow: 0 0 25px rgba(0,0,0,.6);
+.video-container{
+position:relative;
+width:100%;
+padding-top:56.25%;
+overflow:hidden;
+border-radius:14px;
+box-shadow:0 0 25px rgba(0,0,0,.6);
 }
 
-.video-container iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+.video-container iframe{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+border:none;
 }
 
-.beneficios {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-    text-align: center;
+/* ################ BENEFICIOS ################ */
+
+.beneficios{
+max-width:900px;
+margin:60px auto;
+padding:0 20px;
+text-align:center;
 }
 
-.beneficios h2 {
-    margin-bottom: 20px;
+.beneficios ul{
+list-style:none;
+padding:0;
+line-height:2;
+color:#ccc;
 }
 
-.beneficios ul {
-    list-style: none;
-    padding: 0;
-    line-height: 2;
-    color: #ccc;
-}
+/* ################ FORMULARIO ################ */
 
 .formulario{
 
 max-width:420px;
-
 margin:80px auto;
-
 padding:0 20px;
-
-position:relative;
-left:300px;
-
 text-align:center;
 
 }
+
+/* # explicación: quitamos left:300px porque rompía el móvil */
 
 .formulario form{
 width:100%;
 }
 
 .formulario input,
-.formulario textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: none;
+.formulario textarea{
+
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:4px;
+border:none;
+
 }
 
-.btn-azul {
-    padding: 12px;
-    background: transparent;
-    color: cyan;
-    border: 2px solid cyan;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    box-shadow:
-        0 0 5px cyan,
-        0 0 25px cyan,
-        0 0 50px cyan;
-    animation: glow 2s infinite alternate;
+/* ################ BOTON ################ */
+
+.btn-azul{
+
+padding:12px;
+background:transparent;
+color:cyan;
+border:2px solid cyan;
+font-weight:bold;
+border-radius:4px;
+cursor:pointer;
+font-size:16px;
+width:100%;
+letter-spacing:1px;
+
+box-shadow:
+0 0 5px cyan,
+0 0 25px cyan,
+0 0 50px cyan;
+
+animation:glow 2s infinite alternate;
+
 }
 
-.btn-azul:hover {
-    background: cyan;
-    color: #111;
+.btn-azul:hover{
+background:cyan;
+color:#111;
 }
 
-@keyframes glow {
-    from {
-        box-shadow: 0 0 5px cyan, 0 0 25px cyan;
-    }
-    to {
-        box-shadow: 0 0 20px cyan, 0 0 60px cyan;
-    }
+@keyframes glow{
+
+from{
+box-shadow:0 0 5px cyan,0 0 25px cyan;
 }
 
-/* PANEL BOTÓN LATERAL */
+to{
+box-shadow:0 0 20px cyan,0 0 60px cyan;
+}
 
-/* PANEL BOTONES LATERALES */
+}
+
+/* ################ BOTONES LATERALES ################ */
 
 .panel-botones{
+
 position:fixed;
 left:0;
 top:0;
 height:100vh;
 z-index:999;
-}
 
-/* BOTÓN BASE */
+}
 
 .boton-grande{
 
@@ -215,145 +223,58 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 /* POSICIONES */
 
 .ruta{
-top:18%;
-background:linear-gradient(180deg,#ff7a18,#ff3d00);
-}
-
-.nutricion{
-top:42%;
-background:linear-gradient(180deg,#00d26a,#00994c);
-}
-
-.resultados{
-top:66%;
-background:linear-gradient(180deg,#7b5cff,#3f2b96);
-}
-
-/* EFECTO HOVER */
-
-.boton-grande:hover{
-
-width:70px;
-
-box-shadow:
-0 15px 35px rgba(0,0,0,.45),
-0 0 15px rgba(255,255,255,.15);
-
-}
-/* BOTÓN RUTA FITNESS (naranja) */
-
-.ruta{
-
-background:linear-gradient(180deg,#ff6a00,#ff2e00);
-
-}
-
-/* BOTÓN NUTRICIÓN (verde) */
-
-.nutricion{
-
-background:linear-gradient(180deg,#00d26a,#00a85a);
-
-box-shadow:
-0 0 12px #00d26a,
-0 0 25px rgba(0,255,120,0.5);
-
-}
-
-/* BOTÓN RESULTADOS */
-
-.resultados{
-
-background:linear-gradient(180deg,#8a2be2,#4b0082);
-
-box-shadow:
-0 0 12px #8a2be2,
-0 0 30px rgba(138,43,226,0.7);
-
-}
-/* POSICIÓN VERTICAL DE LOS BOTONES */
-
-.ruta{
 top:20%;
-position:fixed;
+background:linear-gradient(180deg,#ff6a00,#ff2e00);
 }
 
 .nutricion{
 top:45%;
-position:fixed;
+background:linear-gradient(180deg,#00d26a,#00a85a);
 }
 
 .resultados{
 top:70%;
-position:fixed;
+background:linear-gradient(180deg,#8a2be2,#4b0082);
 }
 
-/* ######## AJUSTE DESKTOP ######## */
-/* deja espacio para los botones laterales */
+/* ################ DESKTOP ################ */
 
-@media (min-width: 769px){
+/* # explicación: deja espacio para las pestañas */
+
+@media (min-width:769px){
 
 .banner,
 .video-promo,
 .beneficios,
 .formulario{
+
 margin-left:120px;
-}
 
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-.pestana{
-    width: 55px;
-    height: 160px;
-    font-size: 12px;
 }
 
 }
 
-/* ######## AJUSTE MOBILE ######## */
-/* # explicación breve: título más cómodo en celular */
+/* ################ MOBILE ################ */
 
-.banner-texto h1 {
+@media (max-width:768px){
+
+.banner-texto h1{
 font-size:28px;
 }
 
-/* ######## FIN AJUSTE ######## */
+/* # explicación: formulario centrado en celular */
 
-
-/* ######## CORRECCIÓN BOTÓN MOBILE ######## */
-/* # explicación breve: baja el botón para que no tape precio ni texto */
-
-.panel-botones{
-
-position:fixed;
-
-left:0;
-top:auto;
-bottom:120px;
-
-z-index:999;
-
+.formulario{
+max-width:90%;
+margin:60px auto;
 }
 
-/* mover formulario para que no lo tapen las pestañas */
+/* # explicación: botones laterales más compactos */
 
-.formulario-acceso{
-margin-left:70px;
-}
-
-/* AJUSTES SOLO PARA CELULAR */
-@media (max-width: 768px) {
-
-.formulario-acceso{
-    width: 90%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    position: relative;
+.boton-grande{
+width:48px;
+height:150px;
+font-size:11px;
 }
 
 }
@@ -395,7 +316,9 @@ margin-left:70px;
 </div>
 
 <div class="banner-imagen">
+
 <img id="imagenBanner" src="./img/gym.jpg">
+
 </div>
 
 </section>
@@ -406,11 +329,7 @@ margin-left:70px;
 
 <div class="video-container">
 
-<iframe
-src="https://www.youtube.com/embed/6bvusXbsCic"
-allowfullscreen>
-
-</iframe>
+<iframe src="https://www.youtube.com/embed/6bvusXbsCic" allowfullscreen></iframe>
 
 </div>
 
@@ -422,11 +341,7 @@ allowfullscreen>
 
 <div class="video-container">
 
-<iframe
-src="https://www.youtube.com/embed/9NuKH-yiaqw"
-allowfullscreen>
-
-</iframe>
+<iframe src="https://www.youtube.com/embed/9NuKH-yiaqw" allowfullscreen></iframe>
 
 </div>
 
@@ -449,9 +364,9 @@ allowfullscreen>
 
 <div class="formulario">
 
-<h2 style="text-align:center;">Accede al Día 1 GRATIS en la App</h2>
+<h2>Accede al Día 1 GRATIS en la App</h2>
 
-<form class="formulario-acceso" action="https://formsubmit.co/megasupremme@gmail.com" method="POST"></form>
+<form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
 
 <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
 
@@ -475,7 +390,7 @@ allowfullscreen>
 
 <script>
 
-const imagenes = [
+const imagenes=[
 "./img/gym.jpg",
 "./img/gym1.jpg",
 "./img/gym2.jpg",
@@ -485,25 +400,26 @@ const imagenes = [
 "./img/gym6.jpg"
 ];
 
-let indice = 0;
+let indice=0;
 
-const img = document.getElementById("imagenBanner");
+const img=document.getElementById("imagenBanner");
 
-/* ######## EXPLICACIÓN ######## */
-/* # cambia imagen automáticamente cada 5 segundos */
+/* # explicación
+cambia la imagen del banner cada 5 segundos */
 
-setInterval(() => {
+setInterval(()=>{
 
-indice = (indice + 1) % imagenes.length;
+indice=(indice+1)%imagenes.length;
 
-img.src = imagenes[indice];
+img.src=imagenes[indice];
 
-}, 5000);
+},5000);
 
 </script>
 
 </body>
 </html>
+
 
 
 
