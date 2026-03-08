@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados | SayanFitness</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Russo+One&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="estilos_desktop.css">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            /* SE ELIMINÓ ARIAL. BIENVENIDO ORBITRON, AMO MEGATRON */
+            font-family: 'Orbitron', sans-serif !important; 
             background: linear-gradient(135deg, #0b0f1a, #111a2c);
             color: white;
             overflow-x: hidden;
+            letter-spacing: 1px;
         }
 
         .contenedor {
@@ -24,10 +28,22 @@
             text-align: center;
         }
 
-        h1 { margin-bottom: 10px; font-size: 2.5rem; }
-        p { color: #ccc; margin-bottom: 40px; }
+        /* TÍTULOS CON RUSSO ONE PARA MÁXIMO IMPACTO */
+        h1 { 
+            font-family: 'Russo One', sans-serif !important;
+            margin-bottom: 10px; 
+            font-size: 2.8rem; 
+            text-transform: uppercase;
+            text-shadow: 0 0 15px cyan;
+        }
 
-        /* Estilo del botón Volver para que se vea Neón */
+        p { 
+            color: #ccc; 
+            margin-bottom: 40px; 
+            font-weight: 400;
+        }
+
+        /* Estilo del botón Volver con tipografía de combate */
         .btn-volver {
             display: inline-block;
             margin-top: 50px;
@@ -35,7 +51,9 @@
             background: transparent;
             color: cyan;
             border: 2px solid cyan;
-            font-weight: bold;
+            /* TIPOGRAFÍA DE ÉLITE */
+            font-family: 'Orbitron', sans-serif !important;
+            font-weight: 900;
             border-radius: 8px;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -48,6 +66,15 @@
             color: #0b0f1a;
             box-shadow: 0 0 20px cyan, 0 0 50px rgba(0, 255, 255, 0.6);
             transform: translateY(-3px);
+        }
+
+        /* Aseguramos que los gráficos respeten el espacio 3D definido en estilos_desktop.css */
+        .contenedor-3d-graficos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            perspective: 1200px;
         }
     </style>
 </head>
