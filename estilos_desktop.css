@@ -72,4 +72,19 @@
         outline: none;
         box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
     }
+
+    /* Forzamos que el botón QUIERO ACCESO brille como el sol al poner el mouse */
+.formulario .btn-azul:hover {
+    background: cyan !important;
+    color: #111 !important;
+    /* Este es el resplandor neón que buscas */
+    box-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan !important;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* También asegúrate de que el botón de Google Play tenga el mismo efecto */
+.btn-azul:hover {
+    box-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan !important;
+}
 }
