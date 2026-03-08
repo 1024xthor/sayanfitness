@@ -54,3 +54,37 @@
     color: #111 !important;
     box-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan !important;
 }
+
+/* --- ESTILO DARK PARA EL FORMULARIO (WEB Y MÓVIL) --- */
+
+.formulario input, 
+.formulario textarea {
+    background: rgba(15, 22, 38, 0.9) !important; /* Fondo azul oscuro profundo */
+    border: 1px solid rgba(0, 255, 255, 0.2) !important; /* Borde cian sutil */
+    color: #00f7ff !important; /* Texto neón al escribir */
+    padding: 15px !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    outline: none !important;
+    transition: all 0.3s ease;
+}
+
+/* Color del texto de sugerencia (Placeholder) */
+.formulario input::placeholder, 
+.formulario textarea::placeholder {
+    color: rgba(0, 255, 255, 0.4) !important;
+}
+
+/* Efecto cuando haces clic para escribir */
+.formulario input:focus, 
+.formulario textarea:focus {
+    background: rgba(20, 30, 50, 1) !important;
+    border-color: cyan !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3) !important;
+    transform: translateY(-2px); /* Un pequeño levante al escribir */
+}
+
+/* Ajuste específico para que el botón no quede pegado al textarea */
+.formulario .btn-azul {
+    margin-top: 20px !important;
+}
