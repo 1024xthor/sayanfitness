@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Russo+One&display=swap" rel="stylesheet">
+</head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +12,38 @@
 
 <style>
 
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#0b0f1a,#111a2c);
-color:white;
+body {
+    margin: 0;
+    /* ADIÓS ARIAL, BIENVENIDO AL SISTEMA SAYAN */
+    font-family: 'Orbitron', sans-serif !important; 
+    background: linear-gradient(135deg, #0b0f1a, #111a2c);
+    color: white;
+    letter-spacing: 1px;
 }
 
+/* TÍTULO PRINCIPAL CON RUSSO ONE */
+h1, .titulo-nutricion {
+    font-family: 'Russo One', sans-serif !important;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* SUBTÍTULOS DE LOS BLOQUES DE NUTRICIÓN */
+h2, .prioridad-titulo {
+    font-family: 'Russo One', sans-serif !important;
+    color: #00ff88; /* Verde neón para destacar la salud Sayan */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* TEXTO DE LAS RECOMENDACIONES */
+p, .texto-informativo {
+    font-family: 'Orbitron', sans-serif !important;
+    color: #ccc;
+    line-height: 1.6;
+}
 /* CONTENEDOR */
 
 .contenedor{
