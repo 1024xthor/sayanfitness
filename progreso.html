@@ -1,321 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-
-<!-- ######## RESPONSIVE ######## -->
-<!-- # explicación breve: viewport necesario para que el sitio se adapte a celulares -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ######## FIN ######## -->
-
-<title>SayanFitness Progreso</title>
-
-<style>
-
-/* ESTILO GENERAL */
-/* # explicación breve: fondo igual al sitio principal */
-
-body{
-
-margin:0;
-font-family:Arial;
-
-background:linear-gradient(135deg,#0b0f1a,#111a2c);
-
-color:white;
-
-text-align:center;
-
-}
-
-/* TITULO */
-
-h1{
-
-margin-top:60px;
-font-size:44px;
-
-}
-
-/* SUBTITULO */
-
-.sub{
-
-margin-top:10px;
-font-size:20px;
-
-color:#00ffff;
-
-}
-
-/* CONTENEDOR CENTRAL */
-
-.contenedor{
-
-width:85%;
-max-width:1000px;
-
-margin:auto;
-margin-top:60px;
-
-}
-
-/* BARRA PROGRESO */
-
-.barra{
-
-width:100%;
-height:50px;
-
-background:#1a1a1a;
-
-border-radius:40px;
-
-overflow:hidden;
-
-box-shadow:
-0 0 10px cyan,
-0 0 30px cyan;
-
-}
-
-/* BARRA INTERNA */
-
-.progreso{
-
-height:100%;
-
-width:100%;
-
-background:linear-gradient(90deg,#00ffff,#00ff88);
-
-animation:llenar 2s ease;
-
-/* # explicación breve: animación que llena la barra */
-
-}
-
-/* ANIMACION BARRA */
-
-@keyframes llenar{
-
-from{width:0}
-to{width:100%}
-
-}
-
-/* TEXTO INFO */
-
-.info{
-
-margin-top:30px;
-
-font-size:22px;
-
-color:#ccc;
-
-}
-
-/* GRID DIAS */
-
-.dias{
-
-margin-top:60px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-
-gap:25px;
-
-}
-
-/* TARJETA DIA */
-
-.dia{
-
-background:#071d3a;
-
-padding:22px;
-
-border-radius:14px;
-
-font-size:18px;
-
-box-shadow:
-0 0 10px rgba(0,255,255,0.2);
-
-transition:0.3s;
-
-}
-
-/* EFECTO HOVER */
-
-.dia:hover{
-
-transform:scale(1.08);
-
-box-shadow:
-0 0 20px cyan,
-0 0 40px cyan;
-
-}
-
-/* DIAS DESCANSO */
-
-.descanso{
-
-background:#1a1a1a;
-
-color:#aaa;
-
-}
-
-/* BOTON VOLVER */
-
-.boton-volver{
-
-position:fixed;
-
-top:30px;
-left:30px;
-
-padding:14px 20px;
-
-font-size:16px;
-
-background:transparent;
-
-color:cyan;
-
-border:2px solid cyan;
-
-text-decoration:none;
-
-border-radius:6px;
-
-box-shadow:
-0 0 10px cyan;
-
-transition:0.3s;
-
-}
-
-/* HOVER VOLVER */
-
-.boton-volver:hover{
-
-background:cyan;
-
-color:#111;
-
-}
-
-######## AJUSTE MOBILE ########
-/* # explicación breve: optimiza tamaño de título y botón en celulares */
-
-@media (max-width:768px){
-
-h1{
-font-size:30px;
-margin-top:90px;
-}
-
-.sub{
-font-size:18px;
-}
-
-.boton-volver{
-
-top:15px;
-left:15px;
-
-padding:10px 14px;
-
-font-size:14px;
-
-}
-
-}
-
-######## FIN AJUSTE ########
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayanFitness Progreso</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Russo+One&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO GENERAL */
+        body {
+            margin: 0;
+            /* SE ELIMINÓ ARIAL. BIENVENIDO AL FUTURO */
+            font-family: 'Orbitron', sans-serif !important;
+            background: linear-gradient(135deg, #0b0f1a, #111a2c);
+            color: white;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* TITULO DE COMBATE */
+        h1 {
+            font-family: 'Russo One', sans-serif !important;
+            margin-top: 60px;
+            font-size: 44px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+        }
+
+        /* SUBTITULO NÉON */
+        .sub {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #00ffff;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .contenedor {
+            width: 85%;
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+        /* BARRA PROGRESO CON ENERGÍA SAYAN */
+        .barra {
+            width: 100%;
+            height: 50px;
+            background: #1a1a1a;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 0 15px cyan, 0 0 35px rgba(0, 255, 255, 0.4);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .progreso {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #00ffff, #00ff88);
+            animation: llenar 2s ease;
+        }
+
+        @keyframes llenar {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .info {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #ccc;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        /* GRID DE ENTRENAMIENTO */
+        .dias {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+            padding-bottom: 50px;
+        }
+
+        /* TARJETA DIA - ESTILO ARMADURA */
+        .dia {
+            background: rgba(7, 29, 58, 0.8);
+            padding: 22px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            line-height: 1.5;
+        }
+
+        /* EFECTO DE PODER AL PASAR EL MOUSE */
+        .dia:hover {
+            transform: scale(1.1) rotateZ(2deg);
+            background: #0d2a4a;
+            border-color: cyan;
+            box-shadow: 0 0 25px cyan, 0 0 50px rgba(0, 255, 255, 0.5);
+            z-index: 10;
+        }
+
+        /* DIAS DESCANSO - MODO REGENERACIÓN */
+        .descanso {
+            background: #1a1a1a;
+            color: #666;
+            border-color: #333;
+        }
+
+        /* BOTON VOLVER TÁCTICO */
+        .boton-volver {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 900;
+            background: rgba(11, 15, 26, 0.8);
+            color: cyan;
+            border: 2px solid cyan;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px cyan;
+            transition: 0.3s;
+            z-index: 100;
+            text-transform: uppercase;
+        }
+
+        .boton-volver:hover {
+            background: cyan;
+            color: #111;
+            box-shadow: 0 0 20px cyan, 0 0 40px cyan;
+            transform: scale(1.05);
+        }
+
+        /* AJUSTE MOBILE - OPTIMIZACIÓN DE COMBATE */
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; margin-top: 100px; }
+            .sub { font-size: 16px; }
+            .boton-volver { top: 15px; left: 15px; padding: 10px 14px; font-size: 12px; }
+            .dias { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- BOTON VOLVER -->
-<!-- # explicación breve: regresa a la página principal -->
-
 <a href="index.html" class="boton-volver">
-← VOLVER
+    ← VOLVER
 </a>
 
 <h1>DESAFÍO SAYANFITNESS</h1>
 
 <div class="sub">
-Programa estructurado de 28 días
+    Sistema de Entrenamiento de 28 días
 </div>
 
 <div class="contenedor">
+    <div class="barra">
+        <div class="progreso"></div>
+    </div>
 
-<!-- BARRA PROGRESO -->
+    <div class="info">
+        Disciplina • Progreso • Resultados
+    </div>
 
-<div class="barra">
+    <div class="dias">
+        <div class="dia">Día 1<br><b>Mancuernas + Banco</b></div>
+        <div class="dia">Día 2<br><b>Mancuernas</b></div>
+        <div class="dia">Día 3<br><b>Mancuernas</b></div>
+        <div class="dia">Día 4<br><b>Mancuernas + Banco</b></div>
+        <div class="dia">Día 5<br><b>Mancuernas + Barra</b></div>
+        <div class="dia">Día 6<br><b>Mancuerna Rusa</b></div>
+        <div class="dia descanso">Día 7<br><b>Descanso</b></div>
 
-<div class="progreso"></div>
+        <div class="dia">Día 8<br><b>Gimnasia</b></div>
+        <div class="dia">Día 9<br><b>Gimnasia</b></div>
+        <div class="dia">Día 10<br><b>Gimnasia</b></div>
+        <div class="dia">Día 11<br><b>Mancuerna Rusa</b></div>
+        <div class="dia">Día 12<br><b>Rueda Abdominal</b></div>
+        <div class="dia">Día 13<br><b>Banda Elástica</b></div>
+        <div class="dia descanso">Día 14<br><b>Descanso</b></div>
 
-</div>
+        <div class="dia">Día 15<br><b>Cuerda + Barra</b></div>
+        <div class="dia">Día 16<br><b>Mancuerna Rusa</b></div>
+        <div class="dia">Día 17<br><b>Mancuernas + Barra</b></div>
+        <div class="dia">Día 18<br><b>Gimnasia</b></div>
+        <div class="dia">Día 19<br><b>Cuerda</b></div>
+        <div class="dia">Día 20<br><b>Gimnasia</b></div>
+        <div class="dia descanso">Día 21<br><b>Descanso</b></div>
 
-<div class="info">
-
-Disciplina • Progreso • Resultados
-
-</div>
-
-<!-- GRID DIAS -->
-
-<div class="dias">
-
-<div class="dia">Día 1<br>Mancuernas + Banco</div>
-<div class="dia">Día 2<br>Mancuernas</div>
-<div class="dia">Día 3<br>Mancuernas</div>
-<div class="dia">Día 4<br>Mancuernas + Banco</div>
-<div class="dia">Día 5<br>Mancuernas + Barra</div>
-<div class="dia">Día 6<br>Mancuerna Rusa</div>
-<div class="dia descanso">Día 7<br>Descanso</div>
-
-<div class="dia">Día 8<br>Gimnasia</div>
-<div class="dia">Día 9<br>Gimnasia</div>
-<div class="dia">Día 10<br>Gimnasia</div>
-<div class="dia">Día 11<br>Mancuerna Rusa</div>
-<div class="dia">Día 12<br>Rueda Abdominal</div>
-<div class="dia">Día 13<br>Banda Elástica</div>
-<div class="dia descanso">Día 14<br>Descanso</div>
-
-<div class="dia">Día 15<br>Cuerda + Barra</div>
-<div class="dia">Día 16<br>Mancuerna Rusa</div>
-<div class="dia">Día 17<br>Mancuernas + Barra</div>
-<div class="dia">Día 18<br>Gimnasia</div>
-<div class="dia">Día 19<br>Cuerda</div>
-<div class="dia">Día 20<br>Gimnasia</div>
-<div class="dia descanso">Día 21<br>Descanso</div>
-
-<div class="dia">Día 22<br>Mancuernas</div>
-<div class="dia">Día 23<br>Mancuernas</div>
-<div class="dia">Día 24<br>Mancuernas</div>
-<div class="dia">Día 25<br>Mancuernas</div>
-<div class="dia">Día 26<br>Mancuernas + Banco</div>
-<div class="dia">Día 27<br>Mancuernas</div>
-<div class="dia descanso">Día 28<br>Descanso</div>
-
-</div>
-
+        <div class="dia">Día 22<br><b>Mancuernas</b></div>
+        <div class="dia">Día 23<br><b>Mancuernas</b></div>
+        <div class="dia">Día 24<br><b>Mancuernas</b></div>
+        <div class="dia">Día 25<br><b>Mancuernas</b></div>
+        <div class="dia">Día 26<br><b>Mancuernas + Banco</b></div>
+        <div class="dia">Día 27<br><b>Mancuernas</b></div>
+        <div class="dia descanso">Día 28<br><b>Descanso</b></div>
+    </div>
 </div>
 
 </body>
