@@ -138,45 +138,45 @@ border:none;
 
 }
 
-/* ################ BOTON ################ */
+/* ################ BOTON UNIFICADO ################ */
 
-.btn-azul{
-
-padding:12px;
-background:transparent;
-color:cyan;
-border:2px solid cyan;
-font-weight:bold;
-border-radius:4px;
-cursor:pointer;
-font-size:16px;
-width:100%;
-letter-spacing:1px;
-
-box-shadow:
-0 0 5px cyan,
-0 0 25px cyan,
-0 0 50px cyan;
-
-animation:glow 2s infinite alternate;
-
+.btn-azul {
+    display: inline-block; /* Asegura que el padding funcione bien */
+    padding: 12px 24px;
+    background: transparent;
+    color: cyan;
+    border: 2px solid cyan;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor:pointer;
+    font-size: 16px;
+    text-decoration: none; /* Por si es un enlace */
+    text-align: center;
+    letter-spacing: 1px;
+    
+    /* Brillo inicial más sutil para que el hover destaque */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    
+    transition: all 0.3s ease-in-out; /* Transición suave para todos los efectos */
+    
+    /* Mantenemos la animación sutil de fondo */
+    animation: glow-pulse 3s infinite alternate;
 }
 
-.btn-azul:hover{
-background:cyan;
-color:#111;
+/* EFECTO HOVER NEÓN - AQUÍ ESTÁ LA MAGIA */
+.btn-azul:hover {
+    background: cyan;
+    color: #111;
+    
+    /* Intensificamos el brillo neón al pasar el mouse */
+    box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 50px rgba(0, 255, 255, 0.7);
+    transform: translateY(-2px); /* Un pequeño levante para dar feedback visual */
 }
 
-@keyframes glow{
-
-from{
-box-shadow:0 0 5px cyan,0 0 25px cyan;
-}
-
-to{
-box-shadow:0 0 20px cyan,0 0 60px cyan;
-}
-
+/* Una animación más sutil para el estado normal */
+@keyframes glow-pulse {
+    from { box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); }
+    to { box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
 }
 
 /* ################ BOTONES LATERALES ################ */
@@ -433,6 +433,7 @@ img.src=imagenes[indice];
 
 </body>
 </html>
+
 
 
 
