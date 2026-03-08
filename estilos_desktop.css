@@ -38,4 +38,38 @@
     #imagenBanner:hover {
         transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
     }
+
+    .formulario {
+        max-width: 500px !important; /* Limitamos el ancho para que no se estire al infinito */
+        margin: 100px auto !important; /* Lo centramos perfectamente y le damos aire arriba/abajo */
+        background: rgba(255, 255, 255, 0.03); /* Un fondo muy sutil para darle cuerpo */
+        padding: 40px !important;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 255, 255, 0.1); /* Un borde neón casi invisible */
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Sombra para que flote sobre el fondo */
+    }
+
+    .formulario h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo en el título */
+    }
+
+    .formulario input, 
+    .formulario textarea {
+        background: rgba(0, 0, 0, 0.3) !important; /* Fondo oscuro para los inputs */
+        border: 1px solid #333 !important;
+        color: white !important;
+        padding: 15px !important; /* Más espacio interno para que sea cómodo escribir */
+        margin-bottom: 20px !important;
+        transition: all 0.3s ease;
+    }
+
+    .formulario input:focus, 
+    .formulario textarea:focus {
+        border-color: cyan !important; /* Resalta al hacer clic */
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    }
 }
