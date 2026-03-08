@@ -126,6 +126,31 @@ grid:{color:"rgba(0,255,255,0.1)"}
 
 });
 
-}
 
+}
+});
+
+document.querySelectorAll('.card-grafico').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left; // posición X dentro de la tarjeta
+        const y = e.clientY - rect.top;  // posición Y dentro de la tarjeta
+        
+        // Calculamos el centro
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Multiplicador de giro: 0.5 para 180 grados, 1.0 para 360 si te vuelves loco
+        const rotateX = (centerY - y) / 5; 
+        const rotateY = (x - centerX) / 5;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    // Al quitar el mouse, vuelve a su sitio suavemente
+    card.addEventListener('mouseleave', () => {
+        card.style.transition = "transform 0.5s ease";
+        card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        setTimeout(() => { card.style.transition = ""; }, 500);
+    });
 });
