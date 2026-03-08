@@ -27,14 +27,14 @@ scroll-behavior:smooth;
 
 /* ################ BANNER ################ */
 
-.banner{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-justify-content:space-between;
-padding:40px;
-min-height:100vh;
-gap:30px;
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* <- Centrado para que la imagen se vea más integrada */
+    padding: 40px;
+    min-height: 100vh;
+    gap: 15px; /* Reducimos el espacio entre texto e imagen para darles más ancho */
 }
 
 .banner-texto{
@@ -60,11 +60,12 @@ flex:1;
 text-align:center;
 }
 
-.preview-img{
-    width: 320px;
+.preview-img {
+    width: 600px; /* <- Agrandamos sustancialmente para web */
     max-width: 90%;
     height: auto;
     border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Le da un toque más profesional */
 }
 
 /* ################ VIDEO ################ */
@@ -259,9 +260,9 @@ margin-left:120px;
 
 @media (max-width:768px){
 
-.preview-img{
-    width: 75%;
-    max-width: 300px;
+.preview-img {
+    width: 95%; /* <- Casi todo el ancho del celular */
+    max-width: 100%; /* Eliminamos el límite de 300px */
 }
 
 .banner-img{
@@ -281,16 +282,15 @@ margin:60px auto;
 
 /* # explicación: botones laterales más compactos */
 
-.boton-grande{
-width:48px;
-height:150px;
-font-size:11px;
-
-.banner-imagen img{
-max-width:300px;
-margin-top:20px;
+.boton-grande {
+    width: 48px;
+    height: 150px;
+    font-size: 11px;
 }
 
+.banner-imagen img {
+    max-width: 300px;
+    margin-top: 20px;
 }
 </style>
 </head>
@@ -432,6 +432,7 @@ img.src=imagenes[indice];
 
 </body>
 </html>
+
 
 
 
