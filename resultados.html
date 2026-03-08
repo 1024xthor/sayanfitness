@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resultados | SayanFitness</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0b0f1a,#111a2c);
+color:white;
+}
+
+.contenedor{
+
+max-width:1000px;
+margin:auto;
+padding:40px;
+text-align:center;
+
+}
+
+h1{
+margin-bottom:10px;
+}
+
+p{
+color:#ccc;
+margin-bottom:40px;
+}
+
+/* CONTENEDOR GRAFICOS */
+
+.graficos{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+
+}
+
+canvas{
+
+background:#151c30;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.graficos{
+grid-template-columns:1fr;
+}
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:40px;
+padding:12px 25px;
+background:cyan;
+color:black;
+font-weight:bold;
+border-radius:6px;
+text-decoration:none;
+
+}
+/* CONTENEDOR GRAFICOS */
+
+.contenedor-graficos{
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+padding:20px;
+}
+
+/* ESTILO DE LOS GRAFICOS */
+
+.contenedor-graficos canvas{
+background:#0e1628;
+border-radius:10px;
+padding:15px;
+box-shadow:0 0 25px rgba(0,255,255,.15);
+}
+
+/* ADAPTACION CELULAR */
+
+@media(max-width:768px){
+
+.contenedor-graficos{
+grid-template-columns:1fr;
+}
+
+}
+
+/* CONTENEDOR DE GRAFICOS */
+
+.contenedor-graficos{
+
+max-width:900px;
+margin:40px auto;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+align-items:center;
+
+}
+
+/* GRAFICOS */
+
+.contenedor-graficos canvas{
+
+width:100% !important;
+height:220px !important;
+
+background:#0e1628;
+
+border-radius:12px;
+
+padding:15px;
+
+box-shadow:
+0 0 20px rgba(0,255,255,.15);
+
+}
+
+/* MOVIL */
+
+@media (max-width:768px){
+
+.contenedor-graficos{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.contenedor-graficos canvas{
+height:200px !important;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>📊 Resultados Esperados</h1>
+
+<p>
+La mayoría de los usuarios experimenta mejoras progresivas durante los 28 días del programa SayanFitness.
+</p>
+<div class="contenedor-graficos">
+
+<canvas id="graficoLineas"></canvas>
+
+<canvas id="graficoBarras"></canvas>
+
+</div>
+
+
+
+<a href="index.html" class="btn">
+⬅ Volver
+</a>
+
+</div>
+
+<script>
+
+/* GRAFICO DE BARRAS */
+
+new Chart(document.getElementById("barra"), {
+
+type:"bar",
+
+data:{
+labels:["Semana 1","Semana 2","Semana 3","Semana 4"],
+
+datasets:[{
+
+label:"Progreso físico",
+
+data:[20,45,70,95],
+
+}]
+},
+
+options:{
+plugins:{
+legend:{display:false}
+},
+
+scales:{
+y:{
+beginAtZero:true,
+max:100
+}
+}
+
+}
+
+});
+
+
+/* GRAFICO TORTA */
+
+new Chart(document.getElementById("torta"),{
+
+type:"pie",
+
+data:{
+
+labels:[
+"Fuerza",
+"Resistencia",
+"Energía",
+"Disciplina"
+],
+
+datasets:[{
+
+data:[30,25,25,20]
+
+}]
+
+}
+
+});
+
+</script>
+<!-- Librería de gráficos -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- archivo donde están tus gráficos -->
+<script src="graficos.js"></script>
+
+</body>
+</html>
