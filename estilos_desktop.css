@@ -1,90 +1,56 @@
-/* Solo se activará en pantallas grandes (Web) */
+/* --- ESTILOS PARA WEB (Pantallas grandes) --- */
 @media (min-width: 769px) {
-    
-    .banner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 80px; /* Espacio de sobra entre texto e imagen */
-        padding: 0 10%;
-    }
+    .banner { display: flex; align-items: center; justify-content: center; gap: 80px; padding: 0 10%; }
+    .banner-texto { flex: 1; max-width: 600px; }
+    .banner-texto h1 { font-size: 64px; line-height: 1.1; }
+    .banner-imagen { flex: 1; display: flex; justify-content: center; }
+    #imagenBanner { width: 650px !important; max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 255, 255, 0.2); transition: transform 0.4s ease; }
+    #imagenBanner:hover { transform: scale(1.03); }
+    .formulario { max-width: 500px !important; margin: 100px auto !important; background: rgba(255, 255, 255, 0.03); padding: 40px !important; border-radius: 20px; border: 1px solid rgba(0, 255, 255, 0.1); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); }
+}
 
-    .banner-texto {
-        flex: 1;
-        max-width: 600px;
-    }
+.contenedor-3d-graficos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    perspective: 2000px; /* Aumentamos la profundidad */
+}
 
-    .banner-texto h1 {
-        font-size: 64px; /* Título más grande y agresivo */
-        line-height: 1.1;
-    }
+.card-grafico {
+    background: rgba(11, 15, 26, 0.9);
+    border: 2px solid cyan;
+    border-radius: 20px;
+    padding: 20px;
+    width: 450px;
+    /* Quitamos el transition para que el movimiento sea instantáneo al mouse */
+    transform-style: preserve-3d;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    will-change: transform; /* Optimiza para que no se trabe */
+}
 
-    .banner-imagen {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-    }
+/* El brillo lo dejamos fijo para que se vea potente */
+.card-grafico canvas {
+    transform: translateZ(50px); /* Esto hace que el gráfico "flote" fuera de la tarjeta */
+}
 
-    /* AQUÍ ESTÁ EL TRUCO PARA LA IMAGEN GRANDE */
-    #imagenBanner {
-        width: 650px !important; /* Forzamos el tamaño grande en web */
-        max-width: 100%;
-        height: auto;
-        border-radius: 20px;
-        box-shadow: 0 20px 50px rgba(0, 255, 255, 0.2); /* Sutil brillo neón */
-        transition: transform 0.4s ease;
-    }
+/* Giro en Web */
+.card-grafico:hover {
+    transform: rotateY(15deg) rotateX(5deg) translateZ(20px);
+    border-color: cyan;
+}
 
-    #imagenBanner:hover {
-        transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
+/* Giro en Celular (al tocar) */
+@media (max-width: 768px) {
+    .card-grafico:active {
+        transform: rotateY(-15deg) scale(0.95);
     }
+}
 
-    .formulario {
-        max-width: 500px !important; /* Limitamos el ancho para que no se estire al infinito */
-        margin: 100px auto !important; /* Lo centramos perfectamente y le damos aire arriba/abajo */
-        background: rgba(255, 255, 255, 0.03); /* Un fondo muy sutil para darle cuerpo */
-        padding: 40px !important;
-        border-radius: 20px;
-        border: 1px solid rgba(0, 255, 255, 0.1); /* Un borde neón casi invisible */
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Sombra para que flote sobre el fondo */
-    }
-
-    .formulario h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
-        color: #fff;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo en el título */
-    }
-
-    .formulario input, 
-    .formulario textarea {
-        background: rgba(0, 0, 0, 0.3) !important; /* Fondo oscuro para los inputs */
-        border: 1px solid #333 !important;
-        color: white !important;
-        padding: 15px !important; /* Más espacio interno para que sea cómodo escribir */
-        margin-bottom: 20px !important;
-        transition: all 0.3s ease;
-    }
-
-    .formulario input:focus, 
-    .formulario textarea:focus {
-        border-color: cyan !important; /* Resalta al hacer clic */
-        outline: none;
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-    }
-
-    /* Forzamos que el botón QUIERO ACCESO brille como el sol al poner el mouse */
-.formulario .btn-azul:hover {
+/* --- BOTONES NEÓN --- */
+.formulario .btn-azul:hover, .btn-azul:hover {
     background: cyan !important;
     color: #111 !important;
-    /* Este es el resplandor neón que buscas */
     box-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan !important;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-/* También asegúrate de que el botón de Google Play tenga el mismo efecto */
-.btn-azul:hover {
-    box-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan !important;
-}
 }
