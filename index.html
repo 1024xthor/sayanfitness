@@ -106,10 +106,23 @@ body {
     color: #ccc;
 }
 
-.formulario {
-    max-width: 400px;
-    margin: 60px auto;
-    padding: 0 20px;
+.formulario{
+
+max-width:420px;
+
+margin:80px auto;
+
+padding:0 20px;
+
+position:relative;
+left:300px;
+
+text-align:center;
+
+}
+
+.formulario form{
+width:100%;
 }
 
 .formulario input,
@@ -275,6 +288,19 @@ top:70%;
 position:fixed;
 }
 
+/* ######## AJUSTE DESKTOP ######## */
+/* deja espacio para los botones laterales */
+
+@media (min-width: 769px){
+
+.banner,
+.video-promo,
+.beneficios,
+.formulario{
+margin-left:120px;
+}
+
+}
 
 /* RESPONSIVE */
 
@@ -311,7 +337,11 @@ z-index:999;
 
 }
 
-/* ######## FIN CORRECCIÓN ######## */
+/* mover formulario para que no lo tapen las pestañas */
+
+.formulario-acceso{
+margin-left:70px;
+}
 
 }
 
@@ -408,7 +438,7 @@ allowfullscreen>
 
 <h2 style="text-align:center;">Accede al Día 1 GRATIS en la App</h2>
 
-<form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
+<form class="formulario-acceso" action="https://formsubmit.co/megasupremme@gmail.com" method="POST"></form>
 
 <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
 
@@ -461,6 +491,7 @@ img.src = imagenes[indice];
 
 </body>
 </html>
+
 
 
 
