@@ -7,448 +7,285 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Russo+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="estilos_desktop.css">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1KFMT8LKQ"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'TU_ID');
+    gtag('config', 'G-H1KFMT8LKQ');
     </script>
-</head>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1KFMT8LKQ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-H1KFMT8LKQ');
-</script>
-
-<meta charset="UTF-8">
-<title>SayanFitness</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#0b0f1a,#111a2c);
-color:white;
-scroll-behavior:smooth;
-}
-
-/* ################ BANNER ################ */
-
-.banner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; /* <- Centrado para que la imagen se vea más integrada */
-    padding: 40px;
-    min-height: 100vh;
-    gap: 15px; /* Reducimos el espacio entre texto e imagen para darles más ancho */
-}
-
-.banner-texto{
-flex:1;
-min-width:280px;
-}
-
-.banner-texto h1{
-font-size:52px;
-font-weight:800;
-letter-spacing:2px;
-}
-
-.banner-texto p{
-font-size:18px;
-line-height:1.5;
-margin-bottom:30px;
-color:#ccc;
-}
-
-.banner-imagen{
-flex:1;
-text-align:center;
-}
-
-.preview-img {
-    width: 600px; /* <- Agrandamos sustancialmente para web */
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Le da un toque más profesional */
-}
-
-/* ################ VIDEO ################ */
-
-.video-promo{
-max-width:1024px;
-margin:60px auto;
-padding:0 20px;
-text-align:center;
-}
-
-.video-container{
-position:relative;
-width:100%;
-padding-top:56.25%;
-overflow:hidden;
-border-radius:14px;
-box-shadow:0 0 25px rgba(0,0,0,.6);
-}
-
-.video-container iframe{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-border:none;
-}
-
-/* ################ BENEFICIOS ################ */
-
-.beneficios{
-max-width:900px;
-margin:60px auto;
-padding:0 20px;
-text-align:center;
-}
-
-.beneficios ul{
-list-style:none;
-padding:0;
-line-height:2;
-color:#ccc;
-}
-
-/* ################ FORMULARIO ################ */
-
-.formulario{
-
-max-width:420px;
-margin:80px auto;
-padding:0 20px;
-text-align:center;
-
-}
 
-/* # explicación: quitamos left:300px porque rompía el móvil */
-
-.formulario form{
-width:100%;
-}
-
-.formulario input,
-.formulario textarea{
-
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border-radius:4px;
-border:none;
-
-}
-
-/* ################ BOTON UNIFICADO ################ */
-
-.btn-azul {
-    display: inline-block; /* Asegura que el padding funcione bien */
-    padding: 12px 24px;
-    background: transparent;
-    color: cyan;
-    border: 2px solid cyan;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor:pointer;
-    font-size: 16px;
-    text-decoration: none; /* Por si es un enlace */
-    text-align: center;
-    letter-spacing: 1px;
-    
-    /* Brillo inicial más sutil para que el hover destaque */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-    
-    transition: all 0.3s ease-in-out; /* Transición suave para todos los efectos */
-    
-    /* Mantenemos la animación sutil de fondo */
-    animation: glow-pulse 3s infinite alternate;
-}
-
-/* EFECTO HOVER NEÓN - AQUÍ ESTÁ LA MAGIA */
-.btn-azul:hover {
-    background: cyan;
-    color: #111;
-    
-    /* Intensificamos el brillo neón al pasar el mouse */
-    box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 50px rgba(0, 255, 255, 0.7);
-    transform: translateY(-2px); /* Un pequeño levante para dar feedback visual */
-}
-
-/* Una animación más sutil para el estado normal */
-@keyframes glow-pulse {
-    from { box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); }
-    to { box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
-}
-
-/* ################ BOTONES LATERALES ################ */
-
-.panel-botones{
-
-position:fixed;
-left:0;
-top:0;
-height:100vh;
-z-index:999;
-
-}
-
-.boton-grande{
-
-position:fixed;
-left:0;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-width:58px;
-height:180px;
-
-color:white;
-text-decoration:none;
-
-font-size:14px;
-font-weight:700;
-
-border-radius:0 14px 14px 0;
-
-writing-mode:vertical-rl;
-transform:rotate(180deg);
-
-letter-spacing:2px;
-
-transition:all .25s ease;
-
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-
-}
-
-/* POSICIONES CORREGIDAS */
-
-.ruta{
-top:30%;
-background:linear-gradient(180deg,#ff6a00,#ff2e00);
-}
-
-.nutricion{
-top:48%;
-background:linear-gradient(180deg,#00d26a,#00a85a);
-}
-
-.resultados{
-top:66%;
-background:linear-gradient(180deg,#8a2be2,#4b0082);
-}
-
-/* ################ DESKTOP ################ */
-
-/* # explicación: deja espacio para las pestañas */
-
-@media (min-width:769px){
-
-.banner,
-.video-promo,
-.beneficios,
-.formulario{
-
-margin-left:120px;
-
-}
-
-}
-
-/* ################ MOBILE ################ */
-
-@media (max-width:768px){
-
-.preview-img {
-    width: 95%; /* <- Casi todo el ancho del celular */
-    max-width: 100%; /* Eliminamos el límite de 300px */
-}
-
-.banner-img{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-}
-
-/* # explicación: formulario centrado en celular */
-
-.formulario{
-max-width:90%;
-margin:60px auto;
-}
-
-/* # explicación: botones laterales más compactos */
-
-.boton-grande {
-    width: 48px;
-    height: 150px;
-    font-size: 11px;
-}
-
-.banner-imagen img {
-    max-width: 300px;
-    margin-top: 20px;
-}
-</style> <link rel="stylesheet" href="estilos_desktop.css">
-
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif; /* Usando la fuente que importaste */
+            background: linear-gradient(135deg, #0b0f1a, #111a2c);
+            color: white;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* ################ BANNER ################ */
+        .banner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            min-height: 100vh;
+            gap: 30px;
+        }
+
+        .banner-texto {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .banner-texto h1 {
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-family: 'Russo One', sans-serif;
+        }
+
+        .banner-texto p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .banner-imagen {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* CORRECCIÓN: Esta es la clase que faltaba aplicar */
+        .preview-img {
+            width: 600px; 
+            max-width: 95%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        /* ################ BOTÓN NEÓN ################ */
+        .btn-azul {
+            display: inline-block;
+            padding: 15px 35px;
+            background: transparent;
+            color: cyan;
+            border: 2px solid cyan;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+            animation: glow-pulse 3s infinite alternate;
+        }
+
+        .btn-azul:hover {
+            background: cyan;
+            color: #111;
+            box-shadow: 0 0 20px cyan, 0 0 40px rgba(0, 255, 255, 0.6);
+            transform: translateY(-3px);
+        }
+
+        @keyframes glow-pulse {
+            from { box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); }
+            to { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+        }
+
+        /* ################ BOTONES LATERALES ################ */
+        .panel-botones {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            z-index: 1000;
+        }
+
+        .boton-grande {
+            position: fixed;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 180px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 0 14px 14px 0;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            letter-spacing: 2px;
+            transition: all .25s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,.35);
+        }
+
+        .boton-grande:hover {
+            width: 70px;
+            padding-right: 10px;
+        }
+
+        .ruta { top: 25%; background: linear-gradient(180deg, #ff6a00, #ff2e00); }
+        .nutricion { top: 46%; background: linear-gradient(180deg, #00d26a, #00a85a); }
+        .resultados { top: 67%; background: linear-gradient(180deg, #8a2be2, #4b0082); }
+
+        /* ################ SECCIONES COMUNES ################ */
+        .video-promo, .beneficios, .formulario {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 56.25%;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0,0,0,.6);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .beneficios ul {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+            line-height: 2.5;
+            color: #ccc;
+        }
+
+        /* ################ FORMULARIO ################ */
+        .formulario form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .formulario input, .formulario textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background: #1a2233;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        /* ################ RESPONSIVE ################ */
+        @media (min-width: 769px) {
+            .banner, .video-promo, .beneficios, .formulario {
+                margin-left: 140px; /* Espacio para las pestañas */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-texto h1 { font-size: 36px; }
+            .boton-grande { width: 45px; height: 140px; font-size: 11px; }
+            .preview-img { width: 95%; }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="panel-botones">
+    <div class="panel-botones">
+        <a href="progreso.html" class="boton-grande ruta">🔥 RUTA FITNESS</a>
+        <a href="nutricion.html" class="boton-grande nutricion">🥗 NUTRICIÓN</a>
+        <a href="resultados.html" class="boton-grande resultados">📊 RESULTADOS</a>
+    </div>
 
-<a href="progreso.html" class="boton-grande ruta">
-🔥 RUTA FITNESS
-</a>
+    <section class="banner">
+        <div class="banner-texto">
+            <h1>TRANSFORMA TU CUERPO EN 28 DÍAS</h1>
+            <p>Entrenamientos estructurados. Progresión real. Disciplina absoluta.</p>
+            <a href="#preview" class="btn-azul">VER PREVIEW</a>
+            <h3 style="margin-top:30px; color:cyan;">$4990 CLP</h3>
+            <p>Acceso completo en la App</p>
+        </div>
 
-<a href="nutricion.html" class="boton-grande nutricion">
-🥗 NUTRICIÓN
-</a>
+        <div class="banner-imagen">
+            <img id="imagenBanner" class="preview-img" src="./img/gym.jpg" alt="Entrenamiento">
+        </div>
+    </section>
 
-<a href="resultados.html" class="boton-grande resultados">
-📊 RESULTADOS
-</a>
+    <section class="video-promo">
+        <h2>Bienvenida</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/6bvusXbsCic" allowfullscreen></iframe>
+        </div>
+    </section>
 
-</div>
+    <section id="preview" class="video-promo">
+        <h2>Día 1 - Preview</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/9NuKH-yiaqw" allowfullscreen></iframe>
+        </div>
+    </section>
 
-<section class="banner">
+    <section class="beneficios">
+        <h2>¿Qué obtienes?</h2>
+        <ul>
+            <li>✔ 28 días estructurados paso a paso</li>
+            <li>✔ Progresión física real</li>
+            <li>✔ Rutinas profesionales</li>
+            <li>✔ Acceso completo dentro de la App</li>
+        </ul>
+    </section>
 
-<div class="banner-texto">
+    <div class="formulario">
+        <h2>Accede al Día 1 GRATIS en la App</h2>
+        <form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <textarea rows="4" name="comentario" placeholder="¿Cuál es tu objetivo?"></textarea>
+            <button type="submit" class="btn-azul" style="width:100%">QUIERO ACCESO</button>
+        </form>
+    </div>
 
-<h1>TRANSFORMA TU CUERPO EN 28 DÍAS</h1>
+    <section class="video-promo">
+        <h2>Descarga la App</h2>
+        <a href="#" class="btn-azul">Disponible pronto en Google Play</a>
+    </section>
 
-<p>Entrenamientos estructurados. Progresión real. Disciplina absoluta.</p>
+    <script>
+        const imagenes = [
+            "./img/gym.jpg", "./img/gym1.jpg", "./img/gym2.jpg",
+            "./img/gym3.jpg", "./img/gym4.jpg", "./img/gym5.jpg", "./img/gym6.jpg"
+        ];
+        let indice = 0;
+        const img = document.getElementById("imagenBanner");
 
-<a href="#preview" class="btn-azul">VER PREVIEW</a>
-
-<h3>$4990 CLP</h3>
-<h4>Acceso completo en la App</h4>
-
-</div>
-
-<div class="banner-imagen">
-
-<img id="imagenBanner" src="./img/gym.jpg">
-
-</div>
-
-</section>
-
-<section class="video-promo">
-
-<h2>Bienvenida</h2>
-
-<div class="video-container">
-
-<iframe src="https://www.youtube.com/embed/6bvusXbsCic" allowfullscreen></iframe>
-
-</div>
-
-</section>
-
-<section id="preview" class="video-promo">
-
-<h2>Día 1 - Preview</h2>
-
-<div class="video-container">
-
-<iframe src="https://www.youtube.com/embed/9NuKH-yiaqw" allowfullscreen></iframe>
-
-</div>
-
-</section>
-
-<section class="beneficios">
-
-<h2>¿Qué obtienes?</h2>
-
-<ul>
-
-<li>✔ 28 días estructurados paso a paso</li>
-<li>✔ Progresión física real</li>
-<li>✔ Rutinas profesionales</li>
-<li>✔ Acceso completo dentro de la App</li>
-
-</ul>
-
-</section>
-
-<div class="formulario">
-
-<h2>Accede al Día 1 GRATIS en la App</h2>
-
-<form action="https://formsubmit.co/megasupremme@gmail.com" method="POST">
-
-<input type="text" name="nombre" placeholder="Ingrese su nombre" required>
-
-<input type="email" name="email" placeholder="Ingrese su email" required>
-
-<textarea rows="5" name="comentario" placeholder="Ingrese su comentario"></textarea>
-
-<input type="submit" value="QUIERO ACCESO" class="btn-azul">
-
-</form>
-
-</div>
-
-<section class="video-promo">
-
-<h2>Descarga la App</h2>
-
-<a href="#" class="btn-azul">Disponible pronto en Google Play</a>
-
-</section>
-
-<script>
-
-const imagenes=[
-"./img/gym.jpg",
-"./img/gym1.jpg",
-"./img/gym2.jpg",
-"./img/gym3.jpg",
-"./img/gym4.jpg",
-"./img/gym5.jpg",
-"./img/gym6.jpg"
-];
-
-let indice=0;
-
-const img=document.getElementById("imagenBanner");
-
-/* # explicación
-cambia la imagen del banner cada 5 segundos */
-
-setInterval(()=>{
-
-indice=(indice+1)%imagenes.length;
-
-img.src=imagenes[indice];
-
-},5000);
-
-</script>
-
+        setInterval(() => {
+            indice = (indice + 1) % imagenes.length;
+            // Transición suave
+            img.style.opacity = 0;
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+            }, 300);
+        }, 5000);
+    </script>
 </body>
 </html>
+
 
 
 
