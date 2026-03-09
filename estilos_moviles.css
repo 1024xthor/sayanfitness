@@ -1,0 +1,50 @@
+/* ESTILOS EXCLUSIVOS PARA MÓVIL (estilos_mobile.css) */
+
+/* 1. Ajuste del Banner: Apilamos el texto y la imagen verticalmente */
+.banner {
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 80px; /* Espacio para no chocar con botones si los mueves */
+    min-height: auto; 
+    gap: 15px;
+    text-align: center;
+}
+
+/* 2. Ajuste de la imagen: Para que no se la "coma" el borde */
+.preview-img {
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* 3. El Texto: Reducimos tamaños para que quepa todo */
+.banner-texto h1 {
+    font-size: 28px !important;
+    line-height: 1.2;
+}
+
+.banner-texto p {
+    font-size: 16px;
+}
+
+/* 4. BOTONES LATERALES: En el móvil son muy molestos a la izquierda. 
+   Aquí los hacemos más pequeños y menos invasivos */
+.boton-grande {
+    width: 40px !important;
+    height: 110px !important;
+    font-size: 10px !important;
+}
+
+/* 5. Secciones: Quitamos el margen lateral de 140px que era para desktop */
+.banner, .video-promo, .beneficios, .formulario {
+    margin-left: 0 !important; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 6. Vídeos: Aseguramos que el contenedor no se rompa */
+.video-container {
+    margin-bottom: 20px;
+}
